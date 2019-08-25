@@ -1,0 +1,24 @@
+
+import cv2
+import numpy as np
+from PIL import ImageGrab
+import time
+import webbrowser
+
+webbrowser.open('https://livestream.com/accounts/15512011/events/4404299/player?width=500&height=360&enableInfoAndActivity=true&defaultDrawer=&autoPlay=true&mute=false')
+
+def screen_record():
+    last_time = time.time()
+    while(True):
+        printscreen = np.array(ImageGrab.grab(bbox=(0,90,500,360)))
+        print('loop took {} seconds'.format(time.time()-last_time))
+        last_time = time.time()
+        cv2.imshow('window',cv2.cvtColor(printscreen, cv2.COLOR_BGR2GRAY ))
+        if cv2.waitKey(25) & 0xFF == ord('q'):
+            cv2.destroyAllWindows()
+            break
+
+screen_record()
+if cv2.waitKey(25) & 0xFF == ord('q'):
+    cv2.destroyAllWindows()
+    break
