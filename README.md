@@ -1,6 +1,6 @@
 # web-video-monitor
 
-Purose is to:
+Purpose is to:
 
 1. take video from a newscast
 2. Use OpenCV to process the video. 
@@ -15,4 +15,4 @@ Good to have:
 
 2. Trigger script to run at this time.
  Obviously, if a sports game runs a bit late this will affect timing but should still see motion being made on 
- livestream so it <b>shouldn't</b> trigger an email. 
+ livestream so it <b><i>shouldn't</i></b> trigger an email. 
